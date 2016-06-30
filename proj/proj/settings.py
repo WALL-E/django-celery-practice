@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+import mimetypes
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -127,3 +128,6 @@ CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
 CELERYBEAT_SCHEDULER='djcelery.schedulers.DatabaseScheduler'
 CELERY_SEND_TASK_SENT_EVENT=True
 CELERY_SEND_EVENTS=True
+
+mimetypes.add_type("image/svg+xml", ".svg", True)
+mimetypes.add_type("image/svg+xml", ".svgz", True)

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 import mimetypes
+import kombu
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -123,11 +124,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    'djcelery/static',
+)
 
-CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
+# CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
+CELERY_RESULT_BACKEND = 'amqp'
+CELERY_TASK_RESULT_EXPIRES = 36000  # 5 hours.
 CELERYBEAT_SCHEDULER='djcelery.schedulers.DatabaseScheduler'
 CELERY_SEND_TASK_SENT_EVENT=True
 CELERY_SEND_EVENTS=True
+# CELERY_QUEUES = (
+#     kombu.Queue('default', kombu.Exchange('default'), routing_key='default'),
+#     kombu.Queue('DevOps', kombu.Exchange('DevOps'), routing_key='DevOps'),
+#)
 
 mimetypes.add_type("image/svg+xml", ".svg", True)
 mimetypes.add_type("image/svg+xml", ".svgz", True)

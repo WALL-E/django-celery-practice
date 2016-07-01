@@ -18,16 +18,16 @@ yum install -y openssl.x86_64 openssl-devel.x86_64
 yum install -y rabbitmq-server
 yum install -y readline.x86_64 readline-devel.x86_64
 
-#wget https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tgz
-#tar zxvf Python-2.7.9.tgz
-#cd Python-2.7.9
-#./configure --prefix=/usr/local
-#make && make install
-#cd -
+wget https://www.python.org/ftp/python/2.7.12/Python-2.7.12.tgz
+tar zxvf Python-2.7.12.tgz
+cd Python-2.7.12
+./configure --prefix=/usr/local
+make && make install
+cd -
 
-#wget https://bootstrap.pypa.io/get-pip.py
-#/usr/local/bin/python2.7 get-pip.py
-#rm -f get-pip.py
+wget https://bootstrap.pypa.io/get-pip.py
+/usr/local/bin/python2.7 get-pip.py
+rm -f get-pip.py
 
 /usr/local/bin/pip2.7 install --upgrade setuptools
 /usr/local/bin/pip2.7 install --upgrade requests

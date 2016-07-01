@@ -29,6 +29,7 @@ yum install -y rabbitmq-server
 #rm -f get-pip.py
 
 /usr/local/bin/pip2.7 install --upgrade setuptools
+/usr/local/bin/pip2.7 install --upgrade requests
 /usr/local/bin/pip2.7 install --upgrade celery
 /usr/local/bin/pip2.7 install --upgrade django
 /usr/local/bin/pip2.7 install --upgrade django-celery

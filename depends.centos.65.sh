@@ -33,7 +33,7 @@ yum install -y readline.x86_64 readline-devel.x86_64
 /usr/local/bin/pip2.7 install --upgrade requests
 /usr/local/bin/pip2.7 install --upgrade celery
 /usr/local/bin/pip2.7 install --upgrade django
-/usr/local/bin/pip2.7 install --upgrade django-celery
+/usr/local/bin/pip2.7 install --upgrade django-celery==3.2.0a1
 /usr/local/bin/pip2.7 install --upgrade https://github.com/mher/flower/zipball/master#egg=flower
 
 echo "depend pkts install ok"

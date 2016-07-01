@@ -10,12 +10,13 @@ fi
 yum repolist 2>/dev/null | grep "^epel" 1>/dev/null || yum install -y epel-release
 
 command -v vim > /dev/null || sudo yum install -y vim
+command -v wget > /dev/null || sudo yum install -y wget
 
-yum install sqlite-devel -y
-yum install wget -y
+yum install -y sqlite-devel 
 yum install -y zlib.x86_64 zlib-devel.x86_64
 yum install -y openssl.x86_64 openssl-devel.x86_64
 yum install -y rabbitmq-server
+yum install -y readline.x86_64 readline-devel.x86_64
 
 #wget https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tgz
 #tar zxvf Python-2.7.9.tgz

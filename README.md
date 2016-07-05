@@ -1,11 +1,16 @@
 # django-celery-practice
 
-## init celery cluster
+## commands
+```
 init.sh
 
-## start celery cluster
 start.sh
 
-## stop celery cluster
 stop.sh
+```
 
+
+## access web
+
+* django-admin http://0.0.0.0:10060
+* celery-flower http://0.0.0.0:10070

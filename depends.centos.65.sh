@@ -17,6 +17,7 @@ yum install -y zlib.x86_64 zlib-devel.x86_64
 yum install -y openssl.x86_64 openssl-devel.x86_64
 yum install -y rabbitmq-server
 yum install -y readline.x86_64 readline-devel.x86_64
+yum install -y mailcap
 
 command -v python2.7
 ret=$?

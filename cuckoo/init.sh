@@ -11,7 +11,7 @@ cat /etc/passwd|grep celery || adduser celery
 chown celery:celery -R /apps/cuckoo 
 
 killall -9 uwsgi
-uwsgi --ini uwsgi.ini --static-map /static=/usr/local/lib/python2.7/site-packages/django/contrib/admin/static
+uwsgi --ini uwsgi.ini --static-map /static=/usr/local/lib/python2.7/site-packages/django/contrib/admin/static --mimefile /etc/mime.types
 
 echo ""
 echo "you need run commands:"

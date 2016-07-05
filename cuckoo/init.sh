@@ -4,6 +4,5 @@
 rabbitmq-server -detached
 
 cat /etc/passwd|grep celery || adduser celery
-chown /app/cuckoo -R celery
-
+chown celery -R /apps/cuckoo
 

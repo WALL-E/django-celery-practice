@@ -40,6 +40,7 @@ then
 fi
 
 /usr/local/bin/pip2.7 install --upgrade setuptools
+/usr/local/bin/pip2.7 install --upgrade uwsgi
 /usr/local/bin/pip2.7 install --upgrade virtualenv
 /usr/local/bin/pip2.7 install --upgrade requests
 /usr/local/bin/pip2.7 install --upgrade celery
